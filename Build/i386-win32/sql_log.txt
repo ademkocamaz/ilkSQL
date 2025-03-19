@@ -1,0 +1,355 @@
+'2025-03-19 11:03:35.404' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 11:03:35.404' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 11:03:35.415' cat: Connect, proto: mssql, msg: USE master
+'2025-03-19 11:03:35.429' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 11:03:35.440' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 11:03:35.445' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 11:03:35.458' cat: Execute, proto: mssql, msg: Statement 2 : SELECT NAME FROM SYS.DATABASES
+, elapsed time: '00:00:00.004'
+'2025-03-19 11:03:35.464' cat: Fetch complete, proto: mssql, msg: Statement 2, fetched row(s): 0
+'2025-03-19 11:03:35.507' cat: Execute, proto: mssql, msg: Statement 3 : exec sys.sp_columns 'DATABASES', 'SYS', null, null, elapsed time: '00:00:00.033'
+'2025-03-19 11:03:35.507' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 11:03:35.521' cat: Execute, proto: mssql, msg: Statement 3 : select c.colid, c.name, c.type, c.prec, c.scale, c.colstat, c.status, c.iscomputed  from syscolumns c    inner join sys.sysobjects o on (o.id = c.id)    inner join sys.schemas s on (o.uid = s.schema_id)  where c.number=0    and (o.name like 'DATABASES' escape '/' or ('DATABASES' is null))    and (s.name like 'SYS' escape '/' or ('SYS' is null))    and (c.name like null escape '/' or (null is null))  order by colid , elapsed time: '00:00:00.002'
+'2025-03-19 11:03:35.528' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 11:03:35.571' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "master"
+'2025-03-19 11:03:53.276' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 11:03:53.276' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 11:03:53.288' cat: Connect, proto: mssql, msg: USE master
+'2025-03-19 11:03:53.309' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 11:03:53.313' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 11:03:53.319' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 11:03:53.333' cat: Execute, proto: mssql, msg: Statement 2 : SELECT NAME FROM SYS.DATABASES
+, elapsed time: '00:00:00.004'
+'2025-03-19 11:03:53.340' cat: Fetch complete, proto: mssql, msg: Statement 2, fetched row(s): 0
+'2025-03-19 11:03:53.384' cat: Execute, proto: mssql, msg: Statement 3 : exec sys.sp_columns 'DATABASES', 'SYS', null, null, elapsed time: '00:00:00.033'
+'2025-03-19 11:03:53.385' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 11:03:53.412' cat: Execute, proto: mssql, msg: Statement 3 : select c.colid, c.name, c.type, c.prec, c.scale, c.colstat, c.status, c.iscomputed  from syscolumns c    inner join sys.sysobjects o on (o.id = c.id)    inner join sys.schemas s on (o.uid = s.schema_id)  where c.number=0    and (o.name like 'DATABASES' escape '/' or ('DATABASES' is null))    and (s.name like 'SYS' escape '/' or ('SYS' is null))    and (c.name like null escape '/' or (null is null))  order by colid , elapsed time: '00:00:00.015'
+'2025-03-19 11:03:53.414' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 11:03:53.498' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "master"
+'2025-03-19 12:03:52.641' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:52.641' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:52.655' cat: Connect, proto: mssql, msg: USE master
+'2025-03-19 12:03:52.667' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:52.679' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.000'
+'2025-03-19 12:03:52.686' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 12:03:52.700' cat: Execute, proto: mssql, msg: Statement 2 : SELECT NAME FROM SYS.DATABASES
+, elapsed time: '00:00:00.004'
+'2025-03-19 12:03:52.706' cat: Fetch complete, proto: mssql, msg: Statement 2, fetched row(s): 0
+'2025-03-19 12:03:52.749' cat: Execute, proto: mssql, msg: Statement 3 : exec sys.sp_columns 'DATABASES', 'SYS', null, null, elapsed time: '00:00:00.032'
+'2025-03-19 12:03:52.750' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 12:03:52.769' cat: Execute, proto: mssql, msg: Statement 3 : select c.colid, c.name, c.type, c.prec, c.scale, c.colstat, c.status, c.iscomputed  from syscolumns c    inner join sys.sysobjects o on (o.id = c.id)    inner join sys.schemas s on (o.uid = s.schema_id)  where c.number=0    and (o.name like 'DATABASES' escape '/' or ('DATABASES' is null))    and (s.name like 'SYS' escape '/' or ('SYS' is null))    and (c.name like null escape '/' or (null is null))  order by colid , elapsed time: '00:00:00.007'
+'2025-03-19 12:03:52.775' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 12:03:52.807' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "master"
+'2025-03-19 12:03:21.160' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:21.160' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:21.172' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:21.184' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:21.198' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:21.205' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 12:03:21.389' cat: Execute, proto: mssql, msg: Statement 2 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.173'
+'2025-03-19 12:03:21.394' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:02.617' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:02.617' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:02.631' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:02.655' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:02.659' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:02.668' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 12:03:02.695' cat: Execute, proto: mssql, msg: Statement 2 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.010'
+'2025-03-19 12:03:02.699' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.997' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.997' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:27.012' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.025' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.048' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.048' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 12:03:27.061' cat: Execute, proto: mssql, msg: Statement 2 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.000'
+'2025-03-19 12:03:27.072' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.979' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.979' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.990' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.001' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.014' cat: Execute, proto: mssql, msg: Statement 3 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.020' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 12:03:27.033' cat: Execute, proto: mssql, msg: Statement 4 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.043' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.974' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.975' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.998' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.011' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.025' cat: Execute, proto: mssql, msg: Statement 5 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.033' cat: Fetch complete, proto: mssql, msg: Statement 5, fetched row(s): 0
+'2025-03-19 12:03:27.046' cat: Execute, proto: mssql, msg: Statement 6 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.000'
+'2025-03-19 12:03:27.057' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.970' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.970' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.994' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.008' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.033' cat: Execute, proto: mssql, msg: Statement 7 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.033' cat: Fetch complete, proto: mssql, msg: Statement 7, fetched row(s): 0
+'2025-03-19 12:03:27.046' cat: Execute, proto: mssql, msg: Statement 8 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.056' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.950' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.950' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.967' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:26.984' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.002' cat: Execute, proto: mssql, msg: Statement 9 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.010' cat: Fetch complete, proto: mssql, msg: Statement 9, fetched row(s): 0
+'2025-03-19 12:03:27.024' cat: Execute, proto: mssql, msg: Statement 10 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.034' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.990' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.990' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:27.004' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.018' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.042' cat: Execute, proto: mssql, msg: Statement 11 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.043' cat: Fetch complete, proto: mssql, msg: Statement 11, fetched row(s): 0
+'2025-03-19 12:03:27.056' cat: Execute, proto: mssql, msg: Statement 12 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.000'
+'2025-03-19 12:03:27.067' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.954' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.954' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.967' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:26.978' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:26.992' cat: Execute, proto: mssql, msg: Statement 13 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.000' cat: Fetch complete, proto: mssql, msg: Statement 13, fetched row(s): 0
+'2025-03-19 12:03:27.015' cat: Execute, proto: mssql, msg: Statement 14 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.031' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.982' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.982' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.994' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.006' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.020' cat: Execute, proto: mssql, msg: Statement 15 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.028' cat: Fetch complete, proto: mssql, msg: Statement 15, fetched row(s): 0
+'2025-03-19 12:03:27.050' cat: Execute, proto: mssql, msg: Statement 16 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.009'
+'2025-03-19 12:03:27.054' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.962' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.962' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.985' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:26.986' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.001' cat: Execute, proto: mssql, msg: Statement 17 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.009' cat: Fetch complete, proto: mssql, msg: Statement 17, fetched row(s): 0
+'2025-03-19 12:03:27.022' cat: Execute, proto: mssql, msg: Statement 18 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.000'
+'2025-03-19 12:03:27.035' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.984' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.985' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:27.009' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.030' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.043' cat: Execute, proto: mssql, msg: Statement 19 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.050' cat: Fetch complete, proto: mssql, msg: Statement 19, fetched row(s): 0
+'2025-03-19 12:03:27.069' cat: Execute, proto: mssql, msg: Statement 20 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.006'
+'2025-03-19 12:03:27.075' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.955' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.956' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.973' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:26.985' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:26.999' cat: Execute, proto: mssql, msg: Statement 21 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.007' cat: Fetch complete, proto: mssql, msg: Statement 21, fetched row(s): 0
+'2025-03-19 12:03:27.020' cat: Execute, proto: mssql, msg: Statement 22 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.031' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.953' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.953' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.980' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.002' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.016' cat: Execute, proto: mssql, msg: Statement 23 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.023' cat: Fetch complete, proto: mssql, msg: Statement 23, fetched row(s): 0
+'2025-03-19 12:03:27.036' cat: Execute, proto: mssql, msg: Statement 24 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.047' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.986' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.987' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:27.012' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.036' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.062' cat: Execute, proto: mssql, msg: Statement 25 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.072' cat: Fetch complete, proto: mssql, msg: Statement 25, fetched row(s): 0
+'2025-03-19 12:03:27.089' cat: Execute, proto: mssql, msg: Statement 26 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.000'
+'2025-03-19 12:03:27.113' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 12:03:26.972' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 12:03:26.972' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 12:03:26.999' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 12:03:27.012' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 12:03:27.038' cat: Execute, proto: mssql, msg: Statement 27 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.038' cat: Fetch complete, proto: mssql, msg: Statement 27, fetched row(s): 0
+'2025-03-19 12:03:27.053' cat: Execute, proto: mssql, msg: Statement 28 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 12:03:27.065' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.972' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.972' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:26.998' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:27.010' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.023' cat: Execute, proto: mssql, msg: Statement 29 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.032' cat: Fetch complete, proto: mssql, msg: Statement 29, fetched row(s): 0
+'2025-03-19 13:03:27.045' cat: Execute, proto: mssql, msg: Statement 30 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.056' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.980' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.980' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:27.003' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:27.017' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.033' cat: Execute, proto: mssql, msg: Statement 31 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.043' cat: Fetch complete, proto: mssql, msg: Statement 31, fetched row(s): 0
+'2025-03-19 13:03:27.059' cat: Execute, proto: mssql, msg: Statement 32 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.071' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.972' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.972' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:26.999' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:27.011' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.026' cat: Execute, proto: mssql, msg: Statement 33 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.034' cat: Fetch complete, proto: mssql, msg: Statement 33, fetched row(s): 0
+'2025-03-19 13:03:27.048' cat: Execute, proto: mssql, msg: Statement 34 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.059' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.977' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.977' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:27.002' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:27.018' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.035' cat: Execute, proto: mssql, msg: Statement 35 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.042' cat: Fetch complete, proto: mssql, msg: Statement 35, fetched row(s): 0
+'2025-03-19 13:03:27.059' cat: Execute, proto: mssql, msg: Statement 36 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.072' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.993' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.993' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:27.024' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:27.040' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.057' cat: Execute, proto: mssql, msg: Statement 37 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.066' cat: Fetch complete, proto: mssql, msg: Statement 37, fetched row(s): 0
+'2025-03-19 13:03:27.088' cat: Execute, proto: mssql, msg: Statement 38 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.008'
+'2025-03-19 13:03:27.092' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.963' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.963' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:26.988' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:27.010' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.030' cat: Execute, proto: mssql, msg: Statement 39 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.052' cat: Fetch complete, proto: mssql, msg: Statement 39, fetched row(s): 0
+'2025-03-19 13:03:27.072' cat: Execute, proto: mssql, msg: Statement 40 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.087' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.972' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.972' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:26.986' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:26.999' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.013' cat: Execute, proto: mssql, msg: Statement 41 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.023' cat: Fetch complete, proto: mssql, msg: Statement 41, fetched row(s): 0
+'2025-03-19 13:03:27.042' cat: Execute, proto: mssql, msg: Statement 42 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.054' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:26.973' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:26.973' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:26.991' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:27.005' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:27.019' cat: Execute, proto: mssql, msg: Statement 43 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.027' cat: Fetch complete, proto: mssql, msg: Statement 43, fetched row(s): 0
+'2025-03-19 13:03:27.041' cat: Execute, proto: mssql, msg: Statement 44 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:27.053' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:53.838' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:53.838' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:53.863' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:53.884' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:53.904' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:53.914' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 13:03:53.937' cat: Execute, proto: mssql, msg: Statement 2 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.011'
+'2025-03-19 13:03:53.939' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:53.799' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:53.800' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:53.825' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:53.842' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:53.868' cat: Execute, proto: mssql, msg: Statement 3 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.000'
+'2025-03-19 13:03:53.875' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 13:03:53.893' cat: Execute, proto: mssql, msg: Statement 4 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.000'
+'2025-03-19 13:03:53.910' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:53.792' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:53.792' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:53.805' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:53.817' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:53.840' cat: Execute, proto: mssql, msg: Statement 5 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:53.859' cat: Fetch complete, proto: mssql, msg: Statement 5, fetched row(s): 0
+'2025-03-19 13:03:53.881' cat: Execute, proto: mssql, msg: Statement 6 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:53.893' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:12.720' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:12.720' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:12.734' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:12.747' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:12.762' cat: Execute, proto: mssql, msg: Statement 1 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:12.770' cat: Fetch complete, proto: mssql, msg: Statement 1, fetched row(s): 0
+'2025-03-19 13:03:12.785' cat: Execute, proto: mssql, msg: Statement 2 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:12.798' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:12.626' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:12.627' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:12.641' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:12.654' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:12.668' cat: Execute, proto: mssql, msg: Statement 3 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:12.678' cat: Fetch complete, proto: mssql, msg: Statement 3, fetched row(s): 0
+'2025-03-19 13:03:12.693' cat: Execute, proto: mssql, msg: Statement 4 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:12.704' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:12.642' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:12.642' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:12.666' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:12.679' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:12.697' cat: Execute, proto: mssql, msg: Statement 5 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:12.708' cat: Fetch complete, proto: mssql, msg: Statement 5, fetched row(s): 0
+'2025-03-19 13:03:12.724' cat: Execute, proto: mssql, msg: Statement 6 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.001'
+'2025-03-19 13:03:12.736' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
+'2025-03-19 13:03:12.655' cat: Connect, proto: mssql, msg: Connect to "omv.local" as user "sa", errcode: 5703, error: MsgNo : [05703] : Changed language setting to us_english.
+'2025-03-19 13:03:12.656' cat: Connect, proto: mssql, msg: SQL Error:  
+Code: 5703 Message: Connect to "omv.local" as user "sa"
+'2025-03-19 13:03:12.684' cat: Connect, proto: mssql, msg: USE GO3
+'2025-03-19 13:03:12.700' cat: Other, proto: mssql, msg: set quoted_identifier on
+'2025-03-19 13:03:12.716' cat: Execute, proto: mssql, msg: Statement 7 : select Cast(SERVERPROPERTY('productversion') as varchar(500)), elapsed time: '00:00:00.001'
+'2025-03-19 13:03:12.725' cat: Fetch complete, proto: mssql, msg: Statement 7, fetched row(s): 0
+'2025-03-19 13:03:12.739' cat: Execute, proto: mssql, msg: Statement 8 : DELETE FROM L_CURRENCYLIST
+, elapsed time: '00:00:00.000'
+'2025-03-19 13:03:12.751' cat: Disconnect, proto: mssql, msg: CLOSE CONNECTION TO "omv.local" DATABASE "GO3"
