@@ -14,9 +14,9 @@ object Main_Form: TMain_Form
     Height = 454
     Top = 0
     Width = 800
-    ActivePage = TabSheet_Ayarlar
+    ActivePage = TabSheet_About
     Align = alClient
-    TabIndex = 0
+    TabIndex = 3
     TabOrder = 0
     object TabSheet_Ayarlar: TTabSheet
       Caption = 'Ayarlar'
@@ -96,7 +96,6 @@ object Main_Form: TMain_Form
         Height = 30
         Top = 104
         Width = 75
-        Cancel = True
         Caption = 'Durdur'
         Kind = bkCancel
         ModalResult = 2
@@ -688,6 +687,7 @@ object Main_Form: TMain_Form
       ClientHeight = 426
       ClientWidth = 792
       object Image_ilkadam: TImage
+        Cursor = crHandPoint
         Left = 0
         Height = 426
         Top = 0
@@ -26373,5 +26373,12 @@ object Main_Form: TMain_Form
     DataSet = ZQuery_ilkSQL
     Left = 319
     Top = 378
+  end
+  object UniqueInstance_ilkSQL: TUniqueInstance
+    Enabled = True
+    Identifier = 'ilkSQL'
+    OnOtherInstance = UniqueInstance_ilkSQLOtherInstance
+    Left = 201
+    Top = 200
   end
 end

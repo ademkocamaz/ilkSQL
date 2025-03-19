@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, IniFiles, DB, Forms, Controls, Graphics, Dialogs, ComCtrls,
   ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL, SynEdit,
-  ZConnection, ZDataset, ZSqlMonitor, LCLIntf, Unit_Functions;
+  ZConnection, ZDataset, ZSqlMonitor, LCLIntf, UniqueInstance, Unit_Functions;
 
 type
 
@@ -45,6 +45,7 @@ type
     LabeledEdit_User: TLabeledEdit;
     Timer_ilkSQL: TTimer;
     TrayIcon_ilkSQL: TTrayIcon;
+    UniqueInstance_ilkSQL: TUniqueInstance;
     ZConnection_ilkSQL: TZConnection;
     ZQuery_ilkSQL: TZQuery;
     ZSQLMonitor_ilkSQL: TZSQLMonitor;
@@ -62,6 +63,8 @@ type
     procedure Timer_ilkSQLStopTimer(Sender: TObject);
     procedure Timer_ilkSQLTimer(Sender: TObject);
     procedure TrayIcon_ilkSQLDblClick(Sender: TObject);
+    procedure UniqueInstance_ilkSQLOtherInstance(Sender: TObject;
+      ParamCount: integer; const Parameters: array of string);
   private
     procedure Log(message: string);
   public
@@ -107,7 +110,7 @@ begin
     second := StrToInt(LabeledEdit_Second.Text) * 1000;
 
   Timer_ilkSQL.Interval := hour + minute + second;
-  Log('Timer.Interval:'+IntToStr(Timer_ilkSQL.Interval));
+  Log('Timer.Interval:' + IntToStr(Timer_ilkSQL.Interval));
   settings := TIniFile.Create(iniFile);
   settings.WriteString('Connection', 'Host', LabeledEdit_Server.Text);
   settings.WriteString('Connection', 'User', LabeledEdit_User.Text);
@@ -134,7 +137,7 @@ end;
 procedure TMain_Form.Timer_ilkSQLStartTimer(Sender: TObject);
 begin
   Log('Timer başlatıldı.');
-  Log('Timer.Interval:'+IntToStr(Timer_ilkSQL.Interval));
+  Log('Timer.Interval:' + IntToStr(Timer_ilkSQL.Interval));
 end;
 
 procedure TMain_Form.Timer_ilkSQLStopTimer(Sender: TObject);
@@ -162,7 +165,7 @@ begin
     finally
       ZQuery_ilkSQL.Unprepare;
       ZConnection_ilkSQL.Disconnect;
-      Log('Sorgu başarıyla tamamlandı.')
+      Log('İşlem başarıyla tamamlandı.')
     end;
   except
     Log('Hata oluştu.')
@@ -267,22 +270,23 @@ begin
   begin
     settings := TIniFile.Create(iniFile);
 
-    host:=settings.ReadString('Connection', 'Host', '');
-    user:=settings.ReadString('Connection', 'User', '');
-    password:=settings.ReadString('Connection', 'Password', '');
-    database:=settings.ReadString('Database', 'Name', '');
+    host := settings.ReadString('Connection', 'Host', '');
+    user := settings.ReadString('Connection', 'User', '');
+    password := settings.ReadString('Connection', 'Password', '');
+    database := settings.ReadString('Database', 'Name', '');
 
-    LabeledEdit_Server.Text:=host;
-    LabeledEdit_User.Text:=user;
-    LabeledEdit_Password.Text:=password;
-    ComboBox_Databases.Text:=database;
+    LabeledEdit_Server.Text := host;
+    LabeledEdit_User.Text := user;
+    LabeledEdit_Password.Text := password;
+    ComboBox_Databases.Text := database;
 
-    ZConnection_ilkSQL.HostName:=host;
-    ZConnection_ilkSQL.User:=user;
-    ZConnection_ilkSQL.Password:=password;
-    ZConnection_ilkSQL.Database:=database;
+    ZConnection_ilkSQL.HostName := host;
+    ZConnection_ilkSQL.User := user;
+    ZConnection_ilkSQL.Password := password;
+    ZConnection_ilkSQL.Database := database;
 
-    SynEdit_ilkSQL.Text:=settings.ReadString('Query', 'SQL', '');;
+    SynEdit_ilkSQL.Text := settings.ReadString('Query', 'SQL', '');
+
 
     Timer_ilkSQL.Interval := settings.ReadInteger('Timer', 'Interval', 60000);
     Timer_ilkSQL.Enabled := settings.ReadBool('Timer', 'Enabled', False);
@@ -290,7 +294,9 @@ begin
     LabeledEdit_Hour.Text := settings.ReadString('Every', 'Hour', '0');
     LabeledEdit_Minute.Text := settings.ReadString('Every', 'Minute', '0');
     LabeledEdit_Second.Text := settings.ReadString('Every', 'Second', '0');
-  end;
+  end
+  else
+    Self.Show;
 
 end;
 
@@ -302,6 +308,12 @@ end;
 procedure TMain_Form.TrayIcon_ilkSQLDblClick(Sender: TObject);
 begin
   Main_Form.Show;
+end;
+
+procedure TMain_Form.UniqueInstance_ilkSQLOtherInstance(Sender: TObject;
+  ParamCount: integer; const Parameters: array of string);
+begin
+  ShowMessage('ilkSQL zaten arkaplanda çalışıyor.');
 end;
 
 procedure TMain_Form.Log(message: string);

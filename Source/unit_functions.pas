@@ -5,7 +5,7 @@ unit Unit_Functions;
 interface
 
 uses
-  Classes, SysUtils, LazLoggerBase, Registry;
+  Classes, SysUtils, LazLoggerBase, Forms, Registry;
 
 function CheckAutoRun(): boolean;
 procedure EnableAutoRun();
@@ -42,7 +42,7 @@ begin
     if registry.OpenKey('SOFTWARE\Microsoft\Windows\CurrentVersion\Run', False) then
     begin
       registry.WriteString('ilkSQL',
-        '"C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\ilkSQL.exe"');
+        '"'+Application.ExeName+'"');
       registry.CloseKey;
     end;
 

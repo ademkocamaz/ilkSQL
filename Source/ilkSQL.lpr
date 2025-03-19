@@ -15,12 +15,10 @@ uses
   Unit_Main,
   Unit_Functions, { you can add units after this }
   UExceptionLogger;
-
   {$R *.res}
-
 begin
   RequireDerivedFormResource := True;
-  Application.Scaled:=True;
+  Application.Scaled := True;
   Application.Initialize;
 
   exceptionLogger := TExceptionLogger.Create(Application);

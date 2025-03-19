@@ -44,7 +44,7 @@ begin
       registry.WriteString('ilkSQL',
         '"C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\ilkSQL.exe"');
       registry.CloseKey;
-    end
+    end;
 
   finally
     registry.Free;

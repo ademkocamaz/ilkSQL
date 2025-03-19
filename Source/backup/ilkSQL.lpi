@@ -30,6 +30,9 @@
     </RunParams>
     <RequiredPackages>
       <Item>
+        <PackageName Value="uniqueinstance_package"/>
+      </Item>
+      <Item>
         <PackageName Value="FCL"/>
       </Item>
       <Item>
@@ -79,7 +82,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <UnitOutputDirectory Value="..\Build\$(TargetCPU)-$(TargetOS)\lib"/>
+      <UnitOutputDirectory Value="$(TargetCPU)-$(TargetOS)\lib"/>
     </SearchPaths>
     <CodeGeneration>
       <TargetCPU Value="i386"/>
