@@ -16,6 +16,7 @@ uses
   Unit_Functions, { you can add units after this }
   UExceptionLogger;
   {$R *.res}
+
 begin
   RequireDerivedFormResource := True;
   Application.Scaled := True;

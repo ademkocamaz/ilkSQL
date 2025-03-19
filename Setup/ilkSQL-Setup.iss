@@ -25,7 +25,7 @@ LicenseFile=C:\Users\Adem\Documents\GitHub\ilkSQL\Setup\License.txt
 ; Uncomment the following line to run in non administrative install mode (install for current user only).
 ;PrivilegesRequired=lowest
 OutputDir=C:\Users\Adem\Documents\GitHub\ilkSQL\Setup
-OutputBaseFilename=ilkSQL-Setup
+OutputBaseFilename=ilkSQL-Setup-{#MyAppVersion}
 SetupIconFile=C:\Users\Adem\Documents\GitHub\ilkSQL\Source\app.ico
 SolidCompression=yes
 WizardStyle=modern

@@ -10,9 +10,8 @@
         <IsPartOfProject Value="True"/>
         <IsVisibleTab Value="True"/>
         <EditorIndex Value="1"/>
-        <TopLine Value="10"/>
-        <CursorPos X="29" Y="29"/>
-        <UsageCount Value="69"/>
+        <CursorPos X="19" Y="17"/>
+        <UsageCount Value="70"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -23,8 +22,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Main"/>
         <TopLine Value="288"/>
-        <CursorPos X="9" Y="316"/>
-        <UsageCount Value="69"/>
+        <CursorPos X="14" Y="315"/>
+        <UsageCount Value="70"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
       </Unit>
@@ -35,7 +34,7 @@
         <EditorIndex Value="2"/>
         <TopLine Value="3"/>
         <CursorPos X="39" Y="49"/>
-        <UsageCount Value="69"/>
+        <UsageCount Value="70"/>
         <Loaded Value="True"/>
       </Unit>
       <Unit>
@@ -76,38 +75,6 @@
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="186" Column="19" TopLine="165"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="187" Column="19" TopLine="166"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="191" Column="36" TopLine="169"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="192" Column="36" TopLine="170"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="191" Column="36" TopLine="169"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="192" Column="36" TopLine="170"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="193" Column="36" TopLine="171"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="103" Column="7" TopLine="86"/>
-      </Position>
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="101" Column="32" TopLine="74"/>
@@ -157,10 +124,6 @@
         <Caret Line="79" TopLine="79"/>
       </Position>
       <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="8" Column="41" TopLine="64"/>
-      </Position>
-      <Position>
         <Filename Value="ilkSQL.lpr"/>
         <Caret Line="17" Column="35"/>
       </Position>
@@ -195,6 +158,42 @@
       <Position>
         <Filename Value="ilkSQL.lpr"/>
         <Caret Line="38" Column="53" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="29" Column="27" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="315" Column="54" TopLine="288"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="36" Column="39" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="24" Column="5" TopLine="5"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="37" Column="22" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="22" Column="99" TopLine="7"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="30" Column="37" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="35" Column="34" TopLine="10"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="28" Column="36" TopLine="7"/>
       </Position>
     </JumpHistory>
     <RunParams>
