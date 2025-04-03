@@ -1,7 +1,7 @@
 object Main_Form: TMain_Form
-  Left = 953
+  Left = 768
   Height = 600
-  Top = 136
+  Top = 138
   Width = 800
   Caption = 'ilkSQL'
   ClientHeight = 600
@@ -14,9 +14,9 @@ object Main_Form: TMain_Form
     Height = 454
     Top = 0
     Width = 800
-    ActivePage = TabSheet_Ayarlar
+    ActivePage = TabSheet_SQL
     Align = alClient
-    TabIndex = 0
+    TabIndex = 2
     TabOrder = 0
     object TabSheet_Ayarlar: TTabSheet
       Caption = 'Ayarlar'
@@ -26427,7 +26427,6 @@ object Main_Form: TMain_Form
     About.AuthorEmail = 'minesadorada@charcodelvalle.com'
     About.ComponentName = 'Laz Auto-update v0.3.9.0'
     About.LicenseType = abModifiedGPL
-    OnNewVersionAvailable = LazAutoUpdate_ilkSQLNewVersionAvailable
     SFProjectName = '<not applicable>'
     auOtherSourceURL = '<not applicable>'
     auOtherSourceFilename = '<not applicable>'

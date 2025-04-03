@@ -62,8 +62,6 @@ type
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure Image_ilkadamClick(Sender: TObject);
-    procedure LazAutoUpdate_ilkSQLNewVersionAvailable(Sender: TObject;
-      Newer: boolean; OnlineVersion: string);
     procedure MenuItem_ExitClick(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
     procedure Timer_ilkSQLStartTimer(Sender: TObject);
@@ -90,7 +88,7 @@ implementation
 
 procedure TMain_Form.MenuItem_ExitClick(Sender: TObject);
 begin
-  Application.Terminate;
+  Halt();
 end;
 
 procedure TMain_Form.OKButtonClick(Sender: TObject);
@@ -116,27 +114,31 @@ begin
 
   Timer_ilkSQL.Interval := hour + minute + second;
   Log('Timer.Interval:' + IntToStr(Timer_ilkSQL.Interval));
-  settings := TIniFile.Create(iniFile);
-  settings.WriteString('Connection', 'Host', LabeledEdit_Server.Text);
-  settings.WriteString('Connection', 'User', LabeledEdit_User.Text);
-  settings.WriteString('Connection', 'Password', LabeledEdit_Password.Text);
+  try
+    settings := TIniFile.Create(iniFile);
+    settings.WriteString('Connection', 'Host', LabeledEdit_Server.Text);
+    settings.WriteString('Connection', 'User', LabeledEdit_User.Text);
+    settings.WriteString('Connection', 'Password', LabeledEdit_Password.Text);
 
-  settings.WriteString('Database', 'Name', ComboBox_Databases.Text);
+    settings.WriteString('Database', 'Name', ComboBox_Databases.Text);
 
-  settings.WriteInteger('Timer', 'Interval', Timer_ilkSQL.Interval);
-  settings.WriteBool('Timer', 'Enabled', True);
+    settings.WriteInteger('Timer', 'Interval', Timer_ilkSQL.Interval);
+    settings.WriteBool('Timer', 'Enabled', True);
 
-  settings.WriteString('Every', 'Hour', LabeledEdit_Hour.Text);
-  settings.WriteString('Every', 'Minute', LabeledEdit_Minute.Text);
-  settings.WriteString('Every', 'Second', LabeledEdit_Second.Text);
+    settings.WriteString('Every', 'Hour', LabeledEdit_Hour.Text);
+    settings.WriteString('Every', 'Minute', LabeledEdit_Minute.Text);
+    settings.WriteString('Every', 'Second', LabeledEdit_Second.Text);
 
-  settings.WriteString('Query', 'SQL', SynEdit_ilkSQL.Text);
+    settings.WriteString('Query', 'SQL', SynEdit_ilkSQL.Text);
+    Timer_ilkSQL.Enabled := True;
+    Log('Ayarlar kaydedildi.');
+    Self.Hide;
+  finally
+    FreeAndNil(settings);
+  end;
 
-  settings.Free;
   //SynEdit_ilkSQL.Lines.SaveToFile('sql.txt');
-  Timer_ilkSQL.Enabled := True;
-  Log('Ayarlar kaydedildi.');
-  Self.Hide;
+
 end;
 
 procedure TMain_Form.Timer_ilkSQLStartTimer(Sender: TObject);
@@ -316,13 +318,6 @@ end;
 procedure TMain_Form.Image_ilkadamClick(Sender: TObject);
 begin
   OpenURL('https://ilkadam.com.tr');
-end;
-
-procedure TMain_Form.LazAutoUpdate_ilkSQLNewVersionAvailable(Sender: TObject;
-  Newer: boolean; OnlineVersion: string);
-begin
-  if Newer then
-    Log('Yeni güncelleme bulundu. Hakkında bölümünde Güncellemeleri Denetleyi'' tıklayın.');
 end;
 
 procedure TMain_Form.TrayIcon_ilkSQLDblClick(Sender: TObject);

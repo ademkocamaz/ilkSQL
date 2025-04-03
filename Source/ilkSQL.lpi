@@ -22,7 +22,7 @@
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="20"/>
+      <BuildNr Value="29"/>
       <Language Value="041F"/>
       <StringTable CompanyName="İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ" FileDescription="Zamanlayıcı İle SQL Çalıştırma" InternalName="InternalName" LegalCopyright="2025© İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ, All rights reserved." LegalTrademarks="ilkSQL™" OriginalFilename="ilkSQL.exe" ProductName="ilkSQL" ProductVersion="1.0.1"/>
     </VersionInfo>

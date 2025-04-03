@@ -30,7 +30,7 @@ begin
     end
 
   finally
-    registry.Free;
+    FreeAndNil(registry);
   end;
 end;
 
@@ -58,7 +58,7 @@ begin
     end;
 
   finally
-    registry.Free;
+    FreeAndNil(registry);
   end;
 end;
 
@@ -84,7 +84,7 @@ begin
     end;
 
   finally
-    registry.Free;
+    FreeAndNil(registry);
   end;
 end;
 

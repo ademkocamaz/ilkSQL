@@ -24,13 +24,13 @@ begin
     begin
       if registry.ValueExists('ilkSQL') then
         Result := True
-        else
-          Result:=False;
+      else
+        Result := False;
       registry.CloseKey;
     end
 
   finally
-    registry.Free;
+    FreeAndNil(registry);
   end;
 end;
 
@@ -44,15 +44,16 @@ begin
     if registry.OpenKey('SOFTWARE\Microsoft\Windows\CurrentVersion\Run', False) then
     begin
       registry.WriteString('ilkSQL',
-        '"'+Application.ExeName+'"');
+        '"' + Application.ExeName + '"');
       registry.CloseKey;
     end;
 
     registry.RootKey := HKEY_LOCAL_MACHINE;
-    if registry.OpenKey('SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run', False) then
+    if registry.OpenKey('SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run',
+      False) then
     begin
       registry.WriteString('ilkSQL',
-        '"'+Application.ExeName+'"');
+        '"' + Application.ExeName + '"');
       registry.CloseKey;
     end;
 
@@ -75,7 +76,8 @@ begin
     end;
 
     registry.RootKey := HKEY_LOCAL_MACHINE;
-    if registry.OpenKey('SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run', False) then
+    if registry.OpenKey('SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Run',
+      False) then
     begin
       registry.DeleteValue('ilkSQL');
       registry.CloseKey;

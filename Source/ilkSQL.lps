@@ -9,7 +9,7 @@
         <Filename Value="ilkSQL.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="47" Y="12"/>
+        <CursorPos X="47" Y="28"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,8 +21,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Main"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="146"/>
-        <CursorPos X="26" Y="309"/>
+        <TopLine Value="120"/>
+        <CursorPos X="9" Y="91"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -32,8 +32,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Functions"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="56"/>
-        <CursorPos X="20" Y="20"/>
+        <TopLine Value="55"/>
+        <CursorPos X="26" Y="87"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
       </Unit>
@@ -41,18 +41,10 @@
         <Filename Value="C:\lazarus\fpc\3.2.2\source\packages\fcl-registry\src\regdef.inc"/>
         <EditorIndex Value="-1"/>
         <CursorPos X="3" Y="12"/>
-        <UsageCount Value="9"/>
+        <UsageCount Value="8"/>
       </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="271" Column="8" TopLine="238"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="90" Column="38" TopLine="62"/>
-      </Position>
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="287" Column="58" TopLine="276"/>
@@ -164,6 +156,14 @@
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="173" Column="56" TopLine="164"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="285" Column="27" TopLine="274"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="283" Column="25" TopLine="264"/>
       </Position>
     </JumpHistory>
     <RunParams>
