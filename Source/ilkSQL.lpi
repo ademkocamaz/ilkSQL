@@ -12,14 +12,97 @@
       <UseXPManifest Value="True"/>
       <XPManifest>
         <DpiAware Value="True"/>
-        <ExecutionLevel Value="requireAdministrator"/>
         <TextName Value="ilkSQL"/>
         <TextDesc Value="Zamanlayıcı ile SQL Çalıştırma"/>
       </XPManifest>
       <Icon Value="0"/>
     </General>
+    <VersionInfo>
+      <UseVersionInfo Value="True"/>
+      <AutoIncrementBuild Value="True"/>
+      <MajorVersionNr Value="1"/>
+      <RevisionNr Value="1"/>
+      <BuildNr Value="20"/>
+      <Language Value="041F"/>
+      <StringTable CompanyName="İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ" FileDescription="Zamanlayıcı İle SQL Çalıştırma" InternalName="InternalName" LegalCopyright="2025© İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ, All rights reserved." LegalTrademarks="ilkSQL™" OriginalFilename="ilkSQL.exe" ProductName="ilkSQL" ProductVersion="1.0.1"/>
+    </VersionInfo>
     <BuildModes>
       <Item Name="Default" Default="True"/>
+      <Item Name="Debug">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\Build\Debug\$(TargetCPU)-$(TargetOS)\ilkSQL"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\Debug\"/>
+          </SearchPaths>
+          <Parsing>
+            <SyntaxOptions>
+              <IncludeAssertionCode Value="True"/>
+            </SyntaxOptions>
+          </Parsing>
+          <CodeGeneration>
+            <Checks>
+              <IOChecks Value="True"/>
+              <RangeChecks Value="True"/>
+              <OverflowChecks Value="True"/>
+              <StackChecks Value="True"/>
+            </Checks>
+            <VerifyObjMethodCallValidity Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <DebugInfoType Value="dsDwarf3"/>
+              <UseHeaptrc Value="True"/>
+              <TrashVariables Value="True"/>
+              <UseExternalDbgSyms Value="True"/>
+            </Debugging>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
+      <Item Name="Release">
+        <CompilerOptions>
+          <Version Value="11"/>
+          <PathDelim Value="\"/>
+          <Target>
+            <Filename Value="..\Build\Release\$(TargetCPU)-$(TargetOS)\ilkSQL"/>
+          </Target>
+          <SearchPaths>
+            <IncludeFiles Value="$(ProjOutDir)"/>
+            <UnitOutputDirectory Value="lib\Release\"/>
+          </SearchPaths>
+          <CodeGeneration>
+            <SmartLinkUnit Value="True"/>
+            <TargetCPU Value="i386"/>
+            <TargetOS Value="win32"/>
+            <Optimizations>
+              <OptimizationLevel Value="3"/>
+            </Optimizations>
+          </CodeGeneration>
+          <Linking>
+            <Debugging>
+              <GenerateDebugInfo Value="False"/>
+              <RunWithoutDebug Value="True"/>
+            </Debugging>
+            <LinkSmart Value="True"/>
+            <Options>
+              <Win32>
+                <GraphicApplication Value="True"/>
+              </Win32>
+            </Options>
+          </Linking>
+        </CompilerOptions>
+      </Item>
     </BuildModes>
     <PublishOptions>
       <Version Value="2"/>
@@ -30,7 +113,7 @@
     </RunParams>
     <RequiredPackages>
       <Item>
-        <PackageName Value="uniqueinstance_package"/>
+        <PackageName Value="lazupdate"/>
       </Item>
       <Item>
         <PackageName Value="FCL"/>
@@ -82,7 +165,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <UnitOutputDirectory Value="$(TargetCPU)-$(TargetOS)\lib"/>
+      <UnitOutputDirectory Value="lib\"/>
     </SearchPaths>
     <CodeGeneration>
       <TargetCPU Value="i386"/>

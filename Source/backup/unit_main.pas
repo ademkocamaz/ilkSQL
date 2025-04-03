@@ -7,14 +7,16 @@ interface
 uses
   Classes, SysUtils, IniFiles, DB, Forms, Controls, Graphics, Dialogs, ComCtrls,
   ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL, SynEdit,
-  ZConnection, ZDataset, ZSqlMonitor, LCLIntf, UniqueInstance, Unit_Functions;
+  ZConnection, ZDataset, ZSqlMonitor, LCLIntf, ulazautoupdate,
+  Unit_Functions;
 
 type
 
   { TMain_Form }
 
   TMain_Form = class(TForm)
-    BitBtn1: TBitBtn;
+    BitBtn_Stop: TBitBtn;
+    BitBtn_CheckUpdates: TBitBtn;
     BitBtn_Execute: TBitBtn;
     BitBtn_Start: TBitBtn;
     ButtonPanel_ilkSQL: TButtonPanel;
@@ -22,11 +24,14 @@ type
     ComboBox_Databases: TComboBox;
     Button_ListDatabases: TButton;
     DataSource_ilkSQL: TDataSource;
+    GroupBox_Update: TGroupBox;
     GroupBox_Every: TGroupBox;
     Image_ilkadam: TImage;
+    Label_Version: TLabel;
     LabeledEdit_Hour: TLabeledEdit;
     LabeledEdit_Minute: TLabeledEdit;
     LabeledEdit_Second: TLabeledEdit;
+    LazAutoUpdate_ilkSQL: TLazAutoUpdate;
     Memo_Log: TMemo;
     MenuItem_Exit: TMenuItem;
     Panel_Bottom: TPanel;
@@ -45,26 +50,26 @@ type
     LabeledEdit_User: TLabeledEdit;
     Timer_ilkSQL: TTimer;
     TrayIcon_ilkSQL: TTrayIcon;
-    UniqueInstance_ilkSQL: TUniqueInstance;
     ZConnection_ilkSQL: TZConnection;
     ZQuery_ilkSQL: TZQuery;
     ZSQLMonitor_ilkSQL: TZSQLMonitor;
-    procedure BitBtn1Click(Sender: TObject);
+    procedure BitBtn_StopClick(Sender: TObject);
+    procedure BitBtn_CheckUpdatesClick(Sender: TObject);
     procedure BitBtn_ExecuteClick(Sender: TObject);
     procedure BitBtn_StartClick(Sender: TObject);
     procedure Button_ListDatabasesClick(Sender: TObject);
-    procedure CheckBox_AutoRunChange(Sender: TObject);
+    procedure CheckBox_AutoRunClick(Sender: TObject);
     procedure FormClose(Sender: TObject; var CloseAction: TCloseAction);
     procedure FormCreate(Sender: TObject);
     procedure Image_ilkadamClick(Sender: TObject);
+    procedure LazAutoUpdate_ilkSQLNewVersionAvailable(Sender: TObject;
+      Newer: boolean; OnlineVersion: string);
     procedure MenuItem_ExitClick(Sender: TObject);
     procedure OKButtonClick(Sender: TObject);
     procedure Timer_ilkSQLStartTimer(Sender: TObject);
     procedure Timer_ilkSQLStopTimer(Sender: TObject);
     procedure Timer_ilkSQLTimer(Sender: TObject);
     procedure TrayIcon_ilkSQLDblClick(Sender: TObject);
-    procedure UniqueInstance_ilkSQLOtherInstance(Sender: TObject;
-      ParamCount: integer; const Parameters: array of string);
   private
     procedure Log(message: string);
   public
@@ -203,14 +208,33 @@ begin
   end;
 end;
 
+procedure TMain_Form.CheckBox_AutoRunClick(Sender: TObject);
+begin
+  if CheckBox_AutoRun.Checked then
+  begin
+    Unit_Functions.EnableAutoRun();
+    Log('Windows başlangıcında çalıştırma açıldı.');
+  end
+  else
+  begin
+    Unit_Functions.DisableAutoRun();
+    Log('Windows başlangıcında çalıştırma kapatıldı.');
+  end;
+end;
+
 procedure TMain_Form.BitBtn_StartClick(Sender: TObject);
 begin
   Timer_ilkSQL.Enabled := True;
 end;
 
-procedure TMain_Form.BitBtn1Click(Sender: TObject);
+procedure TMain_Form.BitBtn_StopClick(Sender: TObject);
 begin
   Timer_ilkSQL.Enabled := False;
+end;
+
+procedure TMain_Form.BitBtn_CheckUpdatesClick(Sender: TObject);
+begin
+  LazAutoUpdate_ilkSQL.AutoUpdate;
 end;
 
 procedure TMain_Form.BitBtn_ExecuteClick(Sender: TObject);
@@ -241,20 +265,6 @@ begin
 
 end;
 
-procedure TMain_Form.CheckBox_AutoRunChange(Sender: TObject);
-begin
-  if CheckBox_AutoRun.Checked then
-  begin
-    Unit_Functions.EnableAutoRun();
-    Log('Windows başlangıcında çalıştırma açıldı.');
-  end
-  else
-  begin
-    Unit_Functions.DisableAutoRun();
-    Log('Windows başlangıcında çalıştırma kapatıldı.');
-  end;
-end;
-
 procedure TMain_Form.FormCreate(Sender: TObject);
 var
   settings: TIniFile;
@@ -266,38 +276,41 @@ begin
   Log('Hoşgeldiniz.');
 
   CheckBox_AutoRun.Checked := Unit_Functions.CheckAutoRun();
+
   if FileExists(iniFile) then
   begin
-    settings := TIniFile.Create(iniFile);
+    try
+      settings := TIniFile.Create(iniFile);
 
-    host := settings.ReadString('Connection', 'Host', '');
-    user := settings.ReadString('Connection', 'User', '');
-    password := settings.ReadString('Connection', 'Password', '');
-    database := settings.ReadString('Database', 'Name', '');
+      host := settings.ReadString('Connection', 'Host', '');
+      user := settings.ReadString('Connection', 'User', '');
+      password := settings.ReadString('Connection', 'Password', '');
+      database := settings.ReadString('Database', 'Name', '');
 
-    LabeledEdit_Server.Text := host;
-    LabeledEdit_User.Text := user;
-    LabeledEdit_Password.Text := password;
-    ComboBox_Databases.Text := database;
+      LabeledEdit_Server.Text := host;
+      LabeledEdit_User.Text := user;
+      LabeledEdit_Password.Text := password;
+      ComboBox_Databases.Text := database;
 
-    ZConnection_ilkSQL.HostName := host;
-    ZConnection_ilkSQL.User := user;
-    ZConnection_ilkSQL.Password := password;
-    ZConnection_ilkSQL.Database := database;
+      ZConnection_ilkSQL.HostName := host;
+      ZConnection_ilkSQL.User := user;
+      ZConnection_ilkSQL.Password := password;
+      ZConnection_ilkSQL.Database := database;
 
-    SynEdit_ilkSQL.Text := settings.ReadString('Query', 'SQL', '');
+      SynEdit_ilkSQL.Text := settings.ReadString('Query', 'SQL', '');
 
+      Timer_ilkSQL.Interval := settings.ReadInteger('Timer', 'Interval', 60000);
+      Timer_ilkSQL.Enabled := settings.ReadBool('Timer', 'Enabled', False);
 
-    Timer_ilkSQL.Interval := settings.ReadInteger('Timer', 'Interval', 60000);
-    Timer_ilkSQL.Enabled := settings.ReadBool('Timer', 'Enabled', False);
-
-    LabeledEdit_Hour.Text := settings.ReadString('Every', 'Hour', '0');
-    LabeledEdit_Minute.Text := settings.ReadString('Every', 'Minute', '0');
-    LabeledEdit_Second.Text := settings.ReadString('Every', 'Second', '0');
+      LabeledEdit_Hour.Text := settings.ReadString('Every', 'Hour', '0');
+      LabeledEdit_Minute.Text := settings.ReadString('Every', 'Minute', '0');
+      LabeledEdit_Second.Text := settings.ReadString('Every', 'Second', '0');
+    finally
+      FreeAndNil(settings);
+    end;
   end
   else
     Self.Show;
-
 end;
 
 procedure TMain_Form.Image_ilkadamClick(Sender: TObject);
@@ -305,15 +318,16 @@ begin
   OpenURL('https://ilkadam.com.tr');
 end;
 
+procedure TMain_Form.LazAutoUpdate_ilkSQLNewVersionAvailable(Sender: TObject;
+  Newer: boolean; OnlineVersion: string);
+begin
+  if Newer then
+    Log('Yeni güncelleme bulundu. Hakkında bölümünde Güncellemeleri Denetleyi'' tıklayın.');
+end;
+
 procedure TMain_Form.TrayIcon_ilkSQLDblClick(Sender: TObject);
 begin
   Main_Form.Show;
-end;
-
-procedure TMain_Form.UniqueInstance_ilkSQLOtherInstance(Sender: TObject;
-  ParamCount: integer; const Parameters: array of string);
-begin
-  ShowMessage('ilkSQL zaten arkaplanda çalışıyor.');
 end;
 
 procedure TMain_Form.Log(message: string);

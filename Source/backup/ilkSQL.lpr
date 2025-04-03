@@ -17,11 +17,9 @@ uses
   UExceptionLogger;
   {$R *.res}
 
-var
-  unique_instance: TUniqueInstance;
 begin
   RequireDerivedFormResource := True;
-  Application.Scaled := True;
+  Application.Scaled:=True;
   Application.Initialize;
 
   exceptionLogger := TExceptionLogger.Create(Application);

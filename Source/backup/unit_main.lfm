@@ -1,7 +1,7 @@
 object Main_Form: TMain_Form
-  Left = 539
+  Left = 953
   Height = 600
-  Top = 133
+  Top = 136
   Width = 800
   Caption = 'ilkSQL'
   ClientHeight = 600
@@ -14,9 +14,9 @@ object Main_Form: TMain_Form
     Height = 454
     Top = 0
     Width = 800
-    ActivePage = TabSheet_About
+    ActivePage = TabSheet_Ayarlar
     Align = alClient
-    TabIndex = 3
+    TabIndex = 0
     TabOrder = 0
     object TabSheet_Ayarlar: TTabSheet
       Caption = 'Ayarlar'
@@ -29,7 +29,7 @@ object Main_Form: TMain_Form
         Width = 183
         Caption = 'Windows başlangıcında çalıştır.'
         TabOrder = 0
-        OnChange = CheckBox_AutoRunChange
+        OnClick = CheckBox_AutoRunClick
       end
       object GroupBox_Every: TGroupBox
         Left = 8
@@ -91,7 +91,7 @@ object Main_Form: TMain_Form
         OnClick = BitBtn_StartClick
         TabOrder = 2
       end
-      object BitBtn1: TBitBtn
+      object BitBtn_Stop: TBitBtn
         Left = 488
         Height = 30
         Top = 104
@@ -99,7 +99,7 @@ object Main_Form: TMain_Form
         Caption = 'Durdur'
         Kind = bkCancel
         ModalResult = 2
-        OnClick = BitBtn1Click
+        OnClick = BitBtn_StopClick
         TabOrder = 3
       end
     end
@@ -689,7 +689,7 @@ object Main_Form: TMain_Form
       object Image_ilkadam: TImage
         Cursor = crHandPoint
         Left = 0
-        Height = 426
+        Height = 376
         Top = 0
         Width = 792
         Align = alClient
@@ -20700,6 +20700,43 @@ object Main_Form: TMain_Form
         }
         Proportional = True
       end
+      object GroupBox_Update: TGroupBox
+        Left = 0
+        Height = 50
+        Top = 376
+        Width = 792
+        Align = alBottom
+        ClientHeight = 30
+        ClientWidth = 788
+        TabOrder = 0
+        object BitBtn_CheckUpdates: TBitBtn
+          Left = 588
+          Height = 30
+          Top = 0
+          Width = 200
+          Align = alRight
+          Caption = 'Güncellemeleri Denetle'
+          Kind = bkRetry
+          ModalResult = 4
+          OnClick = BitBtn_CheckUpdatesClick
+          TabOrder = 0
+        end
+        object Label_Version: TLabel
+          Left = 409
+          Height = 30
+          Top = 0
+          Width = 179
+          Align = alRight
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'Versiyon 1.0.1'
+          Font.Height = 30
+          Font.Style = [fsBold]
+          Layout = tlCenter
+          OptimalFill = True
+          ParentFont = False
+        end
+      end
     end
   end
   object ButtonPanel_ilkSQL: TButtonPanel
@@ -26344,7 +26381,7 @@ object Main_Form: TMain_Form
     Left = 200
     Top = 352
     object MenuItem_ilkSQL: TMenuItem
-      Caption = 'ilkSQL 1.0.0'
+      Caption = 'ilkSQL 1.0.1'
     end
     object Separator: TMenuItem
       Caption = '-'
@@ -26374,11 +26411,40 @@ object Main_Form: TMain_Form
     Left = 319
     Top = 378
   end
-  object UniqueInstance_ilkSQL: TUniqueInstance
-    Enabled = True
-    Identifier = 'ilkSQL'
-    OnOtherInstance = UniqueInstance_ilkSQLOtherInstance
-    Left = 201
-    Top = 200
+  object LazAutoUpdate_ilkSQL: TLazAutoUpdate
+    About.Description.Strings = (
+      'A component for updating your application'#13#10'Designed for projects hosted by SourceForge and GitHub'#13#10#13#10'Main methods:'#13#10'Procedure AutoUpdate'#13#10'Function NewVersionAvailable: Boolean'#13#10'Function DownloadNewVersion: Boolean'#13#10'Function UpdateToNewVersion: Boolean'#13#10'Procedure ShowWhatsNewIfAvailable'#13#10'For troubleshooting, set DebugMode=TRUE'
+    )
+    About.Title = 'About LazAutoUpdate'
+    About.Height = 450
+    About.Width = 400
+    About.Font.Color = clNavy
+    About.Font.Height = -13
+    About.BackGroundColor = clWindow
+    About.Version = '0.3.9.0'
+    About.Authorname = 'Gordon Bamber'
+    About.Organisation = 'Public Domain'
+    About.AuthorEmail = 'minesadorada@charcodelvalle.com'
+    About.ComponentName = 'Laz Auto-update v0.3.9.0'
+    About.LicenseType = abModifiedGPL
+    OnNewVersionAvailable = LazAutoUpdate_ilkSQLNewVersionAvailable
+    SFProjectName = '<not applicable>'
+    auOtherSourceURL = '<not applicable>'
+    auOtherSourceFilename = '<not applicable>'
+    ProjectType = auGitHubReleaseZip
+    UpdatesFolder = '<not applicable>'
+    VersionsININame = 'versions.ini'
+    ShowDialogs = True
+    VersionCountLimit = 1000000
+    DownloadCountLimit = 10000000
+    ZipfileName = 'versions.zip'
+    GitHubProjectname = 'ademkocamaz'
+    GitHubRepositoryName = 'ilkSQL'
+    GitHubBranchOrTag = 'master'
+    WorkingMode = lauUpdate
+    ShortCut.ShortcutName = 'MyShortcutName'
+    ShortCut.Category = scAudioVideo
+    Left = 358
+    Top = 213
   end
 end
