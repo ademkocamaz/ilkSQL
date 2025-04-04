@@ -20,7 +20,9 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Main"/>
-        <CursorPos X="3" Y="10"/>
+        <IsVisibleTab Value="True"/>
+        <TopLine Value="220"/>
+        <CursorPos Y="234"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -29,7 +31,6 @@
         <Filename Value="unit_functions.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Functions"/>
-        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
         <TopLine Value="58"/>
         <CursorPos X="26" Y="87"/>
@@ -64,7 +65,7 @@
         <DefaultSyntaxHighlighter Value="None"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="27">
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="296" Column="58" TopLine="285"/>
@@ -176,6 +177,10 @@
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="315" Column="40" TopLine="301"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="10" Column="46"/>
       </Position>
     </JumpHistory>
     <RunParams>

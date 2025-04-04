@@ -7,7 +7,7 @@ interface
 uses
   Classes, SysUtils, IniFiles, DB, Forms, Controls, Graphics, Dialogs, ComCtrls,
   ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL, SynEdit,
-  ZConnection, ZDataset, ZSqlMonitor, LCLIntf, ulazautoupdate,
+  ZConnection, ZDataset, ZSqlMonitor, LCLIntf,
   Unit_Functions;
 
 type
@@ -31,7 +31,6 @@ type
     LabeledEdit_Hour: TLabeledEdit;
     LabeledEdit_Minute: TLabeledEdit;
     LabeledEdit_Second: TLabeledEdit;
-    LazAutoUpdate_ilkSQL: TLazAutoUpdate;
     Memo_Log: TMemo;
     MenuItem_Exit: TMenuItem;
     Panel_Bottom: TPanel;
@@ -54,7 +53,6 @@ type
     ZQuery_ilkSQL: TZQuery;
     ZSQLMonitor_ilkSQL: TZSQLMonitor;
     procedure BitBtn_StopClick(Sender: TObject);
-    procedure BitBtn_CheckUpdatesClick(Sender: TObject);
     procedure BitBtn_ExecuteClick(Sender: TObject);
     procedure BitBtn_StartClick(Sender: TObject);
     procedure Button_ListDatabasesClick(Sender: TObject);
@@ -232,11 +230,6 @@ end;
 procedure TMain_Form.BitBtn_StopClick(Sender: TObject);
 begin
   Timer_ilkSQL.Enabled := False;
-end;
-
-procedure TMain_Form.BitBtn_CheckUpdatesClick(Sender: TObject);
-begin
-  LazAutoUpdate_ilkSQL.AutoUpdate;
 end;
 
 procedure TMain_Form.BitBtn_ExecuteClick(Sender: TObject);
