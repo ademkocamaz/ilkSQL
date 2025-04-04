@@ -20,9 +20,7 @@
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Main"/>
-        <IsVisibleTab Value="True"/>
-        <TopLine Value="120"/>
-        <CursorPos X="9" Y="91"/>
+        <CursorPos X="3" Y="10"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,8 +29,9 @@
         <Filename Value="unit_functions.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Functions"/>
+        <IsVisibleTab Value="True"/>
         <EditorIndex Value="2"/>
-        <TopLine Value="55"/>
+        <TopLine Value="58"/>
         <CursorPos X="26" Y="87"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
@@ -43,20 +42,29 @@
         <CursorPos X="3" Y="12"/>
         <UsageCount Value="8"/>
       </Unit>
+      <Unit>
+        <Filename Value="unit_main.lfm"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
+      <Unit>
+        <Filename Value="..\..\..\..\AppData\Local\lazarus\onlinepackagemanager\packages\zeosdbo\src\component\ZConnection.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="35"/>
+        <CursorPos X="26" Y="58"/>
+        <UsageCount Value="10"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="locale\ilkSQL.pot"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="52"/>
+        <UsageCount Value="20"/>
+        <DefaultSyntaxHighlighter Value="None"/>
+      </Unit>
     </Units>
-    <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="287" Column="58" TopLine="276"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="288" Column="58" TopLine="277"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="289" Column="58" TopLine="278"/>
-      </Position>
+    <JumpHistory HistoryIndex="27">
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="296" Column="58" TopLine="285"/>
@@ -72,10 +80,6 @@
       <Position>
         <Filename Value="unit_functions.pas"/>
         <Caret Line="24" Column="53" TopLine="8"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="303" TopLine="310"/>
       </Position>
       <Position>
         <Filename Value="unit_main.pas"/>
@@ -164,6 +168,14 @@
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="283" Column="25" TopLine="264"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="333" Column="16" TopLine="300"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="315" Column="40" TopLine="301"/>
       </Position>
     </JumpHistory>
     <RunParams>

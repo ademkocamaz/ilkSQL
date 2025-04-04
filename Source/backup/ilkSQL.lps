@@ -8,7 +8,7 @@
       <Unit>
         <Filename Value="ilkSQL.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="1"/>
+        <EditorIndex Value="2"/>
         <CursorPos X="47" Y="28"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
@@ -21,8 +21,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Main"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="72"/>
-        <CursorPos X="9" Y="91"/>
+        <CursorPos X="3" Y="10"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,7 +30,7 @@
         <Filename Value="unit_functions.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Functions"/>
-        <EditorIndex Value="2"/>
+        <EditorIndex Value="3"/>
         <TopLine Value="55"/>
         <CursorPos X="26" Y="87"/>
         <UsageCount Value="511"/>
@@ -43,16 +42,15 @@
         <CursorPos X="3" Y="12"/>
         <UsageCount Value="8"/>
       </Unit>
+      <Unit>
+        <Filename Value="unit_main.lfm"/>
+        <EditorIndex Value="1"/>
+        <UsageCount Value="10"/>
+        <Loaded Value="True"/>
+        <DefaultSyntaxHighlighter Value="LFM"/>
+      </Unit>
     </Units>
     <JumpHistory HistoryIndex="29">
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="287" Column="58" TopLine="276"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="288" Column="58" TopLine="277"/>
-      </Position>
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="289" Column="58" TopLine="278"/>
@@ -72,10 +70,6 @@
       <Position>
         <Filename Value="unit_functions.pas"/>
         <Caret Line="24" Column="53" TopLine="8"/>
-      </Position>
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="303" TopLine="310"/>
       </Position>
       <Position>
         <Filename Value="unit_main.pas"/>
@@ -164,6 +158,17 @@
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="283" Column="25" TopLine="264"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.lfm"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="333" Column="16" TopLine="300"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="315" Column="40" TopLine="301"/>
       </Position>
     </JumpHistory>
     <RunParams>

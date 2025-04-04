@@ -88,7 +88,7 @@ implementation
 
 procedure TMain_Form.MenuItem_ExitClick(Sender: TObject);
 begin
-  Halt;
+  Halt();
 end;
 
 procedure TMain_Form.OKButtonClick(Sender: TObject);

@@ -1,0 +1,99 @@
+msgid ""
+msgstr "Content-Type: text/plain; charset=UTF-8"
+
+#: tmain_form.bitbtn_checkupdates.caption
+msgid "Güncellemeleri Denetle"
+msgstr ""
+
+#: tmain_form.bitbtn_execute.caption
+msgid "Çalıştır"
+msgstr ""
+
+#: tmain_form.bitbtn_start.caption
+msgid "Başlat"
+msgstr ""
+
+#: tmain_form.bitbtn_stop.caption
+msgid "Durdur"
+msgstr ""
+
+#: tmain_form.buttonpanel_ilksql.cancelbutton.caption
+msgid "Vazgeç"
+msgstr ""
+
+#: tmain_form.buttonpanel_ilksql.closebutton.caption
+msgid "Kapat"
+msgstr ""
+
+#: tmain_form.buttonpanel_ilksql.okbutton.caption
+msgid "Kaydet ve Başlat"
+msgstr ""
+
+#: tmain_form.button_listdatabases.caption
+msgid "Veritabanlarını Listele"
+msgstr ""
+
+#: tmain_form.caption
+msgid "ilkSQL"
+msgstr ""
+
+#: tmain_form.checkbox_autorun.caption
+msgid "Windows başlangıcında çalıştır."
+msgstr ""
+
+#: tmain_form.groupbox_every.caption
+msgid "Her"
+msgstr ""
+
+#: tmain_form.labelededit_hour.editlabel.caption
+msgid "Saat"
+msgstr ""
+
+#: tmain_form.labelededit_minute.editlabel.caption
+msgid "Dakika"
+msgstr ""
+
+#: tmain_form.labelededit_password.editlabel.caption
+msgid "Şifre"
+msgstr ""
+
+#: tmain_form.labelededit_second.editlabel.caption
+msgid "Saniye"
+msgstr ""
+
+#: tmain_form.labelededit_server.editlabel.caption
+msgid "Server"
+msgstr ""
+
+#: tmain_form.labelededit_user.editlabel.caption
+msgid "Kullanıcı Adı"
+msgstr ""
+
+#: tmain_form.label_version.caption
+msgid "Versiyon 1.0.1"
+msgstr ""
+
+#: tmain_form.menuitem_exit.caption
+msgid "Çıkış"
+msgstr ""
+
+#: tmain_form.menuitem_ilksql.caption
+msgid "ilkSQL 1.0.1"
+msgstr ""
+
+#: tmain_form.tabsheet_about.caption
+msgid "Hakkında"
+msgstr ""
+
+#: tmain_form.tabsheet_ayarlar.caption
+msgid "Ayarlar"
+msgstr ""
+
+#: tmain_form.tabsheet_connection.caption
+msgid "Bağlantı Ayarları"
+msgstr ""
+
+#: tmain_form.tabsheet_sql.caption
+msgid "SQL"
+msgstr ""
+

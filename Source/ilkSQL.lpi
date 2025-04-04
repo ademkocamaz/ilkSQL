@@ -17,12 +17,16 @@
       </XPManifest>
       <Icon Value="0"/>
     </General>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="locale"/>
+    </i18n>
     <VersionInfo>
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
       <RevisionNr Value="1"/>
-      <BuildNr Value="29"/>
+      <BuildNr Value="32"/>
       <Language Value="041F"/>
       <StringTable CompanyName="İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ" FileDescription="Zamanlayıcı İle SQL Çalıştırma" InternalName="InternalName" LegalCopyright="2025© İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ, All rights reserved." LegalTrademarks="ilkSQL™" OriginalFilename="ilkSQL.exe" ProductName="ilkSQL" ProductVersion="1.0.1"/>
     </VersionInfo>
@@ -37,7 +41,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="lib\Debug\"/>
+            <UnitOutputDirectory Value="lib\Debug"/>
           </SearchPaths>
           <Parsing>
             <SyntaxOptions>
@@ -79,7 +83,7 @@
           </Target>
           <SearchPaths>
             <IncludeFiles Value="$(ProjOutDir)"/>
-            <UnitOutputDirectory Value="lib\Release\"/>
+            <UnitOutputDirectory Value="lib\Release"/>
           </SearchPaths>
           <CodeGeneration>
             <SmartLinkUnit Value="True"/>
@@ -165,7 +169,7 @@
     </Target>
     <SearchPaths>
       <IncludeFiles Value="$(ProjOutDir)"/>
-      <UnitOutputDirectory Value="lib\"/>
+      <UnitOutputDirectory Value="lib"/>
     </SearchPaths>
     <CodeGeneration>
       <TargetCPU Value="i386"/>
