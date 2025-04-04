@@ -26439,7 +26439,7 @@ object Main_Form: TMain_Form
     ZipfileName = 'ilkSQL.zip'
     GitHubProjectname = 'ademkocamaz'
     GitHubRepositoryName = 'ilkSQL'
-    GitHubBranchOrTag = 'master'
+    GitHubBranchOrTag = 'main'
     WorkingMode = lauUpdate
     ShortCut.ShortcutName = 'MyShortcutName'
     ShortCut.Category = scAudioVideo
