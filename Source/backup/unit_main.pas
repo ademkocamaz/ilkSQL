@@ -5,7 +5,7 @@ unit Unit_Main;
 interface
 
 uses
-  Classes, SysUtils, IniFiles, FileInfo, DB, Forms, Controls, Graphics, Dialogs,
+  Classes, SysUtils, IniFiles, Forms, Controls, Graphics, Dialogs,
   ComCtrls, ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL,
   SynEdit, ZConnection, ZDataset, ZSqlMonitor, LCLIntf, Unit_Functions,
   Unit_Version;
@@ -280,7 +280,6 @@ procedure TMain_Form.FormCreate(Sender: TObject);
 var
   settings: TIniFile;
   host, user, password, database: string;
-  FileVerInfo: TFileVersionInfo;
 begin
   Memo_Log.Clear;
   SynEdit_ilkSQL.Clear;

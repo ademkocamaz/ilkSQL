@@ -5,7 +5,7 @@ unit Unit_Main;
 interface
 
 uses
-  Classes, SysUtils, IniFiles, FileInfo, DB, Forms, Controls, Graphics, Dialogs,
+  Classes, SysUtils, IniFiles, DB, Forms, Controls, Graphics, Dialogs,
   ComCtrls, ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL,
   SynEdit, ZConnection, ZDataset, ZSqlMonitor, LCLIntf, Unit_Functions,
   Unit_Version;

@@ -8,8 +8,8 @@
       <Unit>
         <Filename Value="ilkSQL.lpr"/>
         <IsPartOfProject Value="True"/>
-        <EditorIndex Value="2"/>
-        <CursorPos X="65" Y="16"/>
+        <EditorIndex Value="1"/>
+        <CursorPos Y="31"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,8 +21,8 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Main"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="265"/>
-        <CursorPos X="4" Y="280"/>
+        <TopLine Value="8"/>
+        <CursorPos X="32" Y="8"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -31,7 +31,7 @@
         <Filename Value="unit_functions.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Functions"/>
-        <EditorIndex Value="3"/>
+        <EditorIndex Value="2"/>
         <CursorPos Y="10"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
@@ -82,11 +82,10 @@
         <Filename Value="unit_version.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Version"/>
-        <EditorIndex Value="1"/>
-        <TopLine Value="137"/>
-        <CursorPos X="59" Y="163"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="65"/>
+        <CursorPos X="76" Y="82"/>
         <UsageCount Value="21"/>
-        <Loaded Value="True"/>
       </Unit>
       <Unit>
         <Filename Value="C:\lazarus\fpc\3.2.2\source\rtl\objpas\sysutils\sysutilh.inc"/>
@@ -96,11 +95,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="28">
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="315" Column="40" TopLine="301"/>
-      </Position>
+    <JumpHistory HistoryIndex="29">
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="10" Column="46"/>
@@ -212,6 +207,14 @@
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="26" Column="17" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="31"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="8" Column="32"/>
       </Position>
     </JumpHistory>
     <RunParams>

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "ilkSQL"
-#define MyAppVersion "1.0.0"
+#define MyAppVersion "1.0.5"
 #define MyAppPublisher "İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ"
 #define MyAppURL "https://www.ilkadam.com.tr/"
 #define MyAppExeName "ilkSQL.exe"
@@ -38,13 +38,13 @@ Name: "turkish"; MessagesFile: "compiler:Languages\Turkish.isl"
 Name: "desktopicon"; Description: "{cm:CreateDesktopIcon}"; GroupDescription: "{cm:AdditionalIcons}"; Flags: unchecked
 
 [Files]
-Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\libcrypto-3.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\libiconv-2.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\libssl-3.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\libsybdb-5.dll"; DestDir: "{app}"; Flags: ignoreversion
-Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\i386-win32\libwinpthread-1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\Release\i386-win32\{#MyAppExeName}"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\Release\i386-win32\libcrypto-3.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\Release\i386-win32\libgcc_s_dw2-1.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\Release\i386-win32\libiconv-2.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\Release\i386-win32\libssl-3.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\Release\i386-win32\libsybdb-5.dll"; DestDir: "{app}"; Flags: ignoreversion
+Source: "C:\Users\Adem\Documents\GitHub\ilkSQL\Build\Release\i386-win32\libwinpthread-1.dll"; DestDir: "{app}"; Flags: ignoreversion
 ; NOTE: Don't use "Flags: ignoreversion" on any shared system files
 
 [Icons]

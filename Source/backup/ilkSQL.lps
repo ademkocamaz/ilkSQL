@@ -3,13 +3,13 @@
   <ProjectSession>
     <PathDelim Value="\"/>
     <Version Value="12"/>
-    <BuildModes Active="Debug"/>
+    <BuildModes Active="Release"/>
     <Units>
       <Unit>
         <Filename Value="ilkSQL.lpr"/>
         <IsPartOfProject Value="True"/>
         <EditorIndex Value="1"/>
-        <CursorPos X="65" Y="16"/>
+        <CursorPos Y="31"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
       </Unit>
@@ -21,7 +21,7 @@
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit_Main"/>
         <IsVisibleTab Value="True"/>
-        <CursorPos X="3" Y="288"/>
+        <CursorPos X="32" Y="8"/>
         <UsageCount Value="511"/>
         <Loaded Value="True"/>
         <LoadedDesigner Value="True"/>
@@ -82,8 +82,8 @@
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Version"/>
         <EditorIndex Value="-1"/>
-        <TopLine Value="137"/>
-        <CursorPos X="59" Y="163"/>
+        <TopLine Value="65"/>
+        <CursorPos X="76" Y="82"/>
         <UsageCount Value="21"/>
       </Unit>
       <Unit>
@@ -94,11 +94,7 @@
         <UsageCount Value="10"/>
       </Unit>
     </Units>
-    <JumpHistory HistoryIndex="27">
-      <Position>
-        <Filename Value="unit_main.pas"/>
-        <Caret Line="315" Column="40" TopLine="301"/>
-      </Position>
+    <JumpHistory HistoryIndex="28">
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="10" Column="46"/>
@@ -206,6 +202,14 @@
       <Position>
         <Filename Value="unit_main.pas"/>
         <Caret Line="23" Column="61" TopLine="70"/>
+      </Position>
+      <Position>
+        <Filename Value="unit_main.pas"/>
+        <Caret Line="26" Column="17" TopLine="37"/>
+      </Position>
+      <Position>
+        <Filename Value="ilkSQL.lpr"/>
+        <Caret Line="31"/>
       </Position>
     </JumpHistory>
     <RunParams>
