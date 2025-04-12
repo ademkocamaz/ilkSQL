@@ -25,10 +25,10 @@
       <UseVersionInfo Value="True"/>
       <AutoIncrementBuild Value="True"/>
       <MajorVersionNr Value="1"/>
-      <RevisionNr Value="1"/>
-      <BuildNr Value="36"/>
+      <RevisionNr Value="3"/>
+      <BuildNr Value="46"/>
       <Language Value="041F"/>
-      <StringTable CompanyName="İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ" FileDescription="Zamanlayıcı İle SQL Çalıştırma" InternalName="InternalName" LegalCopyright="2025© İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ, All rights reserved." LegalTrademarks="ilkSQL™" OriginalFilename="ilkSQL.exe" ProductName="ilkSQL" ProductVersion="1.0.1"/>
+      <StringTable CompanyName="İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ" FileDescription="Zamanlayıcı İle SQL Çalıştırma" InternalName="InternalName" LegalCopyright="2025© İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ, All rights reserved." LegalTrademarks="ilkSQL™" OriginalFilename="ilkSQL.exe" ProductName="ilkSQL" ProductVersion="1.0.3"/>
     </VersionInfo>
     <BuildModes>
       <Item Name="Default" Default="True"/>
@@ -155,6 +155,11 @@
         <Filename Value="unit_functions.pas"/>
         <IsPartOfProject Value="True"/>
         <UnitName Value="Unit_Functions"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit_version.pas"/>
+        <IsPartOfProject Value="True"/>
+        <UnitName Value="Unit_Version"/>
       </Unit>
     </Units>
   </ProjectOptions>

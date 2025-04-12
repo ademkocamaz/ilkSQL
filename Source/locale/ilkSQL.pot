@@ -1,10 +1,6 @@
 msgid ""
 msgstr "Content-Type: text/plain; charset=UTF-8"
 
-#: tmain_form.bitbtn_checkupdates.caption
-msgid "Güncellemeleri Denetle"
-msgstr ""
-
 #: tmain_form.bitbtn_execute.caption
 msgid "Çalıştır"
 msgstr ""
@@ -70,7 +66,7 @@ msgid "Kullanıcı Adı"
 msgstr ""
 
 #: tmain_form.label_version.caption
-msgid "Versiyon 1.0.1"
+msgid "Versiyon"
 msgstr ""
 
 #: tmain_form.menuitem_exit.caption

@@ -20709,31 +20709,15 @@ object Main_Form: TMain_Form
         ClientHeight = 30
         ClientWidth = 788
         TabOrder = 0
-        object BitBtn_CheckUpdates: TBitBtn
-          Left = 588
-          Height = 30
-          Top = 0
-          Width = 200
-          Align = alRight
-          Caption = 'Güncellemeleri Denetle'
-          Kind = bkRetry
-          ModalResult = 4
-          TabOrder = 0
-        end
         object Label_Version: TLabel
-          Left = 409
+          Left = 744
           Height = 30
           Top = 0
-          Width = 179
+          Width = 44
           Align = alRight
           Alignment = taCenter
-          AutoSize = False
-          Caption = 'Versiyon 1.0.1'
-          Font.Height = 30
-          Font.Style = [fsBold]
+          Caption = 'Versiyon'
           Layout = tlCenter
-          OptimalFill = True
-          ParentFont = False
         end
       end
     end

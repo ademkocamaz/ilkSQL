@@ -5,10 +5,10 @@ unit Unit_Main;
 interface
 
 uses
-  Classes, SysUtils, IniFiles, DB, Forms, Controls, Graphics, Dialogs, ComCtrls,
-  ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL, SynEdit,
-  ZConnection, ZDataset, ZSqlMonitor, LCLIntf,
-  Unit_Functions;
+  Classes, SysUtils, IniFiles, FileInfo, DB, Forms, Controls, Graphics, Dialogs,
+  ComCtrls, ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL,
+  SynEdit, ZConnection, ZDataset, ZSqlMonitor, LCLIntf, Unit_Functions,
+  Unit_Version;
 
 type
 
@@ -16,7 +16,6 @@ type
 
   TMain_Form = class(TForm)
     BitBtn_Stop: TBitBtn;
-    BitBtn_CheckUpdates: TBitBtn;
     BitBtn_Execute: TBitBtn;
     BitBtn_Start: TBitBtn;
     ButtonPanel_ilkSQL: TButtonPanel;
@@ -53,7 +52,6 @@ type
     ZQuery_ilkSQL: TZQuery;
     ZSQLMonitor_ilkSQL: TZSQLMonitor;
     procedure BitBtn_StopClick(Sender: TObject);
-    procedure BitBtn_CheckUpdatesClick(Sender: TObject);
     procedure BitBtn_ExecuteClick(Sender: TObject);
     procedure BitBtn_StartClick(Sender: TObject);
     procedure Button_ListDatabasesClick(Sender: TObject);
@@ -155,19 +153,27 @@ procedure TMain_Form.Timer_ilkSQLTimer(Sender: TObject);
 begin
   try
     try
-      Log('Veritabanına bağlanılıyor.');
-      ZConnection_ilkSQL.HostName := LabeledEdit_Server.Text;
-      ZConnection_ilkSQL.User := LabeledEdit_User.Text;
-      ZConnection_ilkSQL.Password := LabeledEdit_Password.Text;
-      ZConnection_ilkSQL.Database := ComboBox_Databases.Text;
-      ZConnection_ilkSQL.Connect;
-      Log('Veritabanına bağlanıldı.');
-      Log('Sorgu çalıştırılıyor.');
-      ZQuery_ilkSQL.SQL.Text := SynEdit_ilkSQL.Text;
-      if not ZQuery_ilkSQL.Prepared then
-        ZQuery_ilkSQL.Prepare;
-      ZQuery_ilkSQL.ExecSQL;
-      Log('Sorgu çalıştırıldı.');
+      if SynEdit_ilkSQL.Text = '' then
+      begin
+        Log('Çalıştırılacak sorgu boş.');
+        Exit;
+      end
+      else
+      begin
+        Log('Veritabanına bağlanılıyor.');
+        ZConnection_ilkSQL.HostName := LabeledEdit_Server.Text;
+        ZConnection_ilkSQL.User := LabeledEdit_User.Text;
+        ZConnection_ilkSQL.Password := LabeledEdit_Password.Text;
+        ZConnection_ilkSQL.Database := ComboBox_Databases.Text;
+        ZConnection_ilkSQL.Connect;
+        Log('Veritabanına bağlanıldı.');
+        Log('Sorgu çalıştırılıyor.');
+        ZQuery_ilkSQL.SQL.Text := SynEdit_ilkSQL.Text;
+        if not ZQuery_ilkSQL.Prepared then
+          ZQuery_ilkSQL.Prepare;
+        ZQuery_ilkSQL.ExecSQL;
+        Log('Sorgu çalıştırıldı.');
+      end;
     finally
       ZQuery_ilkSQL.Unprepare;
       ZConnection_ilkSQL.Disconnect;
@@ -225,7 +231,13 @@ end;
 
 procedure TMain_Form.BitBtn_StartClick(Sender: TObject);
 begin
-  Timer_ilkSQL.Enabled := True;
+  if SynEdit_ilkSQL.Text = '' then
+  begin
+    Log('Çalıştırılacak sorgu boş.');
+    Exit;
+  end
+  else
+    Timer_ilkSQL.Enabled := True;
 end;
 
 procedure TMain_Form.BitBtn_StopClick(Sender: TObject);
@@ -233,35 +245,33 @@ begin
   Timer_ilkSQL.Enabled := False;
 end;
 
-procedure TMain_Form.BitBtn_CheckUpdatesClick(Sender: TObject);
-begin
-  LazAutoUpdate_ilkSQL.AutoUpdate;
-end;
-
 procedure TMain_Form.BitBtn_ExecuteClick(Sender: TObject);
 begin
+  if SynEdit_ilkSQL.Text = '' then
+  begin
+    Log('Çalıştırılacak sorgu boş.');
+    Exit;
+  end;
   try
-    try
-      Screen.Cursor := crHourGlass;
-      ZConnection_ilkSQL.HostName := LabeledEdit_Server.Text;
-      ZConnection_ilkSQL.User := LabeledEdit_User.Text;
-      ZConnection_ilkSQL.Password := LabeledEdit_Password.Text;
-      ZConnection_ilkSQL.Database := ComboBox_Databases.Text;
-      ZConnection_ilkSQL.Connect;
-      Log('Veritabanına bağlanıldı.');
-      ZQuery_ilkSQL.SQL.Text := SynEdit_ilkSQL.Text;
-      if not ZQuery_ilkSQL.Prepared then
-        ZQuery_ilkSQL.Prepare;
-      ZQuery_ilkSQL.ExecSQL;
-      Log('Sorgu çalıştırıldı.');
-    finally
-      Screen.Cursor := crDefault;
-      ZQuery_ilkSQL.Unprepare;
-      ZQuery_ilkSQL.Close;
-      ZConnection_ilkSQL.Disconnect;
-    end;
-  except
-
+    Screen.Cursor := crHourGlass;
+    Log('Veritabanına bağlanılıyor.');
+    ZConnection_ilkSQL.HostName := LabeledEdit_Server.Text;
+    ZConnection_ilkSQL.User := LabeledEdit_User.Text;
+    ZConnection_ilkSQL.Password := LabeledEdit_Password.Text;
+    ZConnection_ilkSQL.Database := ComboBox_Databases.Text;
+    ZConnection_ilkSQL.Connect;
+    Log('Veritabanına bağlanıldı.');
+    Log('Sorgu çalıştırılıyor.');
+    ZQuery_ilkSQL.SQL.Text := SynEdit_ilkSQL.Text;
+    if not ZQuery_ilkSQL.Prepared then
+      ZQuery_ilkSQL.Prepare;
+    ZQuery_ilkSQL.ExecSQL;
+    Log('Sorgu çalıştırıldı.');
+  finally
+    Screen.Cursor := crDefault;
+    ZQuery_ilkSQL.Unprepare;
+    ZQuery_ilkSQL.Close;
+    ZConnection_ilkSQL.Disconnect;
   end;
 
 end;
@@ -270,9 +280,12 @@ procedure TMain_Form.FormCreate(Sender: TObject);
 var
   settings: TIniFile;
   host, user, password, database: string;
+  FileVerInfo: TFileVersionInfo;
 begin
   Memo_Log.Clear;
   SynEdit_ilkSQL.Clear;
+
+  Label_Version.Caption := 'Versiyon: ' + AppVersionInfo.VersionStr;
 
   Log('Hoşgeldiniz.');
 

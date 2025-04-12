@@ -13,7 +13,7 @@ uses
   Forms,
   zcomponent,
   Unit_Main,
-  Unit_Functions, { you can add units after this }
+  Unit_Functions, Unit_Version, { you can add units after this }
   UExceptionLogger;
   {$R *.res}
 
