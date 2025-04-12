@@ -26364,7 +26364,7 @@ object Main_Form: TMain_Form
     Left = 200
     Top = 352
     object MenuItem_ilkSQL: TMenuItem
-      Caption = 'ilkSQL 1.0.1'
+      Caption = 'ilkSQL 1.0.0'
     end
     object Separator: TMenuItem
       Caption = '-'

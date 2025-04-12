@@ -20,6 +20,6 @@
 {"hash":82389604,"name":"tmain_form.buttonpanel_ilksql.okbutton.caption","sourcebytes":[75,97,121,100,101,116,32,118,101,32,66,97,197,159,108,97,116],"value":"Kaydet ve Ba\u015Flat"},
 {"hash":5342852,"name":"tmain_form.buttonpanel_ilksql.closebutton.caption","sourcebytes":[75,97,112,97,116],"value":"Kapat"},
 {"hash":210821511,"name":"tmain_form.buttonpanel_ilksql.cancelbutton.caption","sourcebytes":[86,97,122,103,101,195,167],"value":"Vazge\u00E7"},
-{"hash":154213185,"name":"tmain_form.menuitem_ilksql.caption","sourcebytes":[105,108,107,83,81,76,32,49,46,48,46,49],"value":"ilkSQL 1.0.1"},
+{"hash":154213184,"name":"tmain_form.menuitem_ilksql.caption","sourcebytes":[105,108,107,83,81,76,32,49,46,48,46,48],"value":"ilkSQL 1.0.0"},
 {"hash":260518367,"name":"tmain_form.menuitem_exit.caption","sourcebytes":[195,135,196,177,107,196,177,197,159],"value":"\u00C7\u0131k\u0131\u015F"}
 ]}

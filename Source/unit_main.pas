@@ -285,6 +285,7 @@ begin
   SynEdit_ilkSQL.Clear;
 
   Label_Version.Caption := 'Versiyon: ' + AppVersionInfo.VersionStr;
+  MenuItem_ilkSQL.Caption:='ilkSQL ' + AppVersionInfo.VersionStr;;
 
   Log('Hoşgeldiniz.');
 

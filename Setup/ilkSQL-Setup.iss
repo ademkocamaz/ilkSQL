@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "ilkSQL"
-#define MyAppVersion "1.0.5"
+#define MyAppVersion "1.0.6"
 #define MyAppPublisher "İLKADAM YAZILIM VE BİLİŞİM TEKNOLOJİLERİ"
 #define MyAppURL "https://www.ilkadam.com.tr/"
 #define MyAppExeName "ilkSQL.exe"

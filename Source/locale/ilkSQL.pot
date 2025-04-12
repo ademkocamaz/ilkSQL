@@ -74,7 +74,7 @@ msgid "Çıkış"
 msgstr ""
 
 #: tmain_form.menuitem_ilksql.caption
-msgid "ilkSQL 1.0.1"
+msgid "ilkSQL 1.0.0"
 msgstr ""
 
 #: tmain_form.tabsheet_about.caption

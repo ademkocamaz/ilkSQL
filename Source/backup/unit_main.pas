@@ -5,7 +5,7 @@ unit Unit_Main;
 interface
 
 uses
-  Classes, SysUtils, IniFiles, Forms, Controls, Graphics, Dialogs,
+  Classes, SysUtils, IniFiles, DB, Forms, Controls, Graphics, Dialogs,
   ComCtrls, ExtCtrls, StdCtrls, Buttons, ButtonPanel, Menus, SynHighlighterSQL,
   SynEdit, ZConnection, ZDataset, ZSqlMonitor, LCLIntf, Unit_Functions,
   Unit_Version;
@@ -285,6 +285,7 @@ begin
   SynEdit_ilkSQL.Clear;
 
   Label_Version.Caption := 'Versiyon: ' + AppVersionInfo.VersionStr;
+  MenuItem_ilkSQL.Caption:='ilkSQL ' + AppVersionInfo.VersionStr;;
 
   Log('Hoşgeldiniz.');
 
